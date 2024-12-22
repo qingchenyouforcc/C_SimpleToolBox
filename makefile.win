@@ -1,0 +1,36 @@
+# Project: Project
+# Makefile created by Red Panda C++ 2.9
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = algorithm.o tool.o main.o
+LINKOBJ  = algorithm.o tool.o main.o
+CLEANOBJ  =  algorithm.o tool.o main.o Project.exe
+LIBS     = 
+INCS     =  
+CXXINCS  =  
+BIN      = Project.exe
+CXXFLAGS = $(CXXINCS)  -g3 -pipe -Wall -D__DEBUG__
+CFLAGS   = $(INCS)  -g3 -pipe -Wall -D__DEBUG__
+RM       = del /q /f
+WINDRESFLAGS  = 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	-$(RM) $(CLEANOBJ) > NUL 2>&1
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+algorithm.o: algorithm.c algorithm.h
+	$(CC) -c algorithm.c -o algorithm.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+tool.o: tool.c tool.h
+	$(CC) -c tool.c -o tool.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+main.o: main.c algorithm.h tool.h C_libs.h function.h utils.h
+	$(CC) -c main.c -o main.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
