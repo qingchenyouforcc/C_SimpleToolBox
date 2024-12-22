@@ -1,2 +1,28 @@
-# C_SimpleToolBox
-A console toolbox for novices to learn the C language project framework
+# 程序名称
+
+这是一个用于新手学习的，基于C语言的控制台程序，提供算法演示和实用工具功能，用户可以通过菜单选择不同的操作。
+该程序使用redpanda编写，可以用redpanda/devc++打开工程文件.dev
+
+## 主要功能
+
+1. **算法演示**：
+   - **选择排序** (Selection Sort)
+   - **二分查找** (Dichotomy Lookup)
+   - **冒泡排序** (Bubble Sort)
+
+2. **实用工具**：
+   - **解诗头** (de_head_poem)
+   - **密码生成器** (pw_gen)
+
+## 项目结构
+
+该程序由多个模块组成，包含以下文件：
+
+- `C_libs.h`：包含必要的库文件。
+- `utils.h`：包含实用工具函数。
+- `function.h`：包含算法和其他功能。
+- `tool.h`：包含工具相关的函数。
+- `algorithm.h`：包含排序和查找算法的实现。
+- `main.c`：主程序入口文件，包含菜单和功能选择逻辑。
+
+
